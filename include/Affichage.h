@@ -16,9 +16,9 @@ class Affichage
         void update();
         void add_img(std::string image, int x, int y);
 
-    protected:
+//    protected:
 
-    private:
+//    private:
         ///Fond de l'interface et Box contenant les sommets
         grman::WidgetBox m_fond;
         grman::WidgetBox m_f_orque;
@@ -29,14 +29,13 @@ class Affichage
         grman::WidgetBox m_f_krill;
 
         ///Image des sommets
-        grman::WidgetImage m_image;
         grman::WidgetImage m_orque;
         grman::WidgetImage m_pingouin;
         grman::WidgetImage m_phoque;
         grman::WidgetImage m_mo;
         grman::WidgetImage m_poisson;
         grman::WidgetImage m_krill;
-        grman::WidgetText m_dragme;
+
 
 
         /// Construction des Arcs entre les sommets, ils seront tous orientés vers leur(s) "proie(s)"
@@ -50,7 +49,7 @@ class Affichage
     grman::WidgetEdge m_phoque_orque;
     grman::WidgetEdge m_orque_mo;
 
-        ///Diiférents textes
+        ///Diiférents noms sommets
 
     grman::WidgetText m_nom_orque;
     grman::WidgetText m_nom_phoque;
@@ -67,6 +66,17 @@ class Affichage
     grman::WidgetVSlider m_pop_poisson;
     grman::WidgetVSlider m_pop_krill;
     grman::WidgetVSlider m_pop_mo;
+
+        ///Affichage des valeurs de coef
+
+    grman::WidgetText m_phoq_orq;
+    grman::WidgetText m_ping_phoq;
+    grman::WidgetText m_ping_orq;
+    grman::WidgetText m_pois_ping;
+    grman::WidgetText m_kril_ping;
+    grman::WidgetText m_kril_pois;
+    grman::WidgetText m_mo_kril;
+    grman::WidgetText m_orq_mo;
 
 
 

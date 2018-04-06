@@ -60,7 +60,7 @@
 	<iostream>
 	"Sommet.h"
 
-1523012285 c:\users\jade laville\documents\projet piscine\github\project info\include\sommet.h
+1523021501 c:\users\jade laville\documents\projet piscine\github\project info\include\sommet.h
 	<vector>
 	<map>
 	<string>
@@ -68,7 +68,7 @@
 	<iostream>
 	"Affichage.h"
 
-1522947620 source:c:\users\jade laville\documents\projet piscine\github\project info\src\main.cpp
+1523027769 source:c:\users\jade laville\documents\projet piscine\github\project info\src\main.cpp
 	"../grman/grman.h"
 	<iostream>
 	"grman.h"
@@ -76,6 +76,9 @@
 	"Affichage.h"
 	<stdio.h>
 	<stdlib.h>
+	"Sommet.h"
+	"widget.h"
+	"Menu.h"
 
 1522850769 source:c:\users\jade laville\documents\projet piscine\github\project info\src\arc.cpp
 	"Arc.h"
@@ -123,7 +126,7 @@
 1522636919 source:c:\users\jade laville\documents\projet piscine\github\project info\src\widget.cpp
 	"widget.h"
 
-1523012300 c:\users\jade laville\documents\projet piscine\github\project info\include\affichage.h
+1523023551 c:\users\jade laville\documents\projet piscine\github\project info\include\affichage.h
 	"grman.h"
 	<iostream>
 	<stack>
@@ -134,4 +137,16 @@
 	<iostream>
 	<stdio.h>
 	<stdlib.h>
+
+1523025626 source:c:\users\jade laville\documents\projet piscine\github\project info\src\menu.cpp
+	"Menu.h"
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+
+1523026264 c:\users\jade laville\documents\projet piscine\github\project info\include\menu.h
+	"grman.h"
+	<iostream>
+	<stack>
+	"Affichage.h"
 

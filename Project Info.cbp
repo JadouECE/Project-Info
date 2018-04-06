@@ -42,6 +42,7 @@
 		</Linker>
 		<Unit filename="include/Affichage.h" />
 		<Unit filename="include/Arc.h" />
+		<Unit filename="include/Menu.h" />
 		<Unit filename="include/Sommet.h" />
 		<Unit filename="include/coords.h" />
 		<Unit filename="include/graph.h" />
@@ -50,6 +51,7 @@
 		<Unit filename="include/widget.h" />
 		<Unit filename="src/Affichage.cpp" />
 		<Unit filename="src/Arc.cpp" />
+		<Unit filename="src/Menu.cpp" />
 		<Unit filename="src/Sommet.cpp" />
 		<Unit filename="src/coords.cpp" />
 		<Unit filename="src/graph.cpp" />

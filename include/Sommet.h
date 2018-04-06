@@ -93,6 +93,7 @@ class Sommet
         Sommet();
         ~Sommet();
         void set_population_t(double pop) {m_population_t=pop;}
+        double get_population_t() {return m_population_t;}
         /// Vertex étant géré par Graph ce sera la méthode update de graph qui appellera
         /// le pre_update et post_update de Vertex (pas directement la boucle de jeu)
         /// Voir l'implémentation Graph::update dans le .cpp
