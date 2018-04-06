@@ -150,3 +150,134 @@
 	<stack>
 	"Affichage.h"
 
+1523037039 source:c:\users\ls161871\documents\github\project-info\src\affichage.cpp
+	"Affichage.h"
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+
+1523035689 c:\users\ls161871\documents\github\project-info\include\affichage.h
+	"grman.h"
+	<iostream>
+	<stack>
+	"Sommet.h"
+
+1523035689 c:\users\ls161871\documents\github\project-info\include\grman.h
+	<allegro.h>
+	<string>
+	"grman_couleurs.h"
+	"coords.h"
+	"widget.h"
+
+1523035689 c:\users\ls161871\documents\github\project-info\include\grman_couleurs.h
+
+1523035689 c:\users\ls161871\documents\github\project-info\include\coords.h
+	<cmath>
+
+1523035689 c:\users\ls161871\documents\github\project-info\include\widget.h
+	"grman.h"
+	<iostream>
+	<string>
+	<vector>
+	<algorithm>
+	<allegro.h>
+
+1523035689 c:\users\ls161871\documents\github\project-info\include\sommet.h
+	<vector>
+	<map>
+	<string>
+	<memory>
+	<iostream>
+	"Affichage.h"
+
+1523035690 source:c:\users\ls161871\documents\github\project-info\src\arc.cpp
+	"Arc.h"
+
+1523035689 c:\users\ls161871\documents\github\project-info\include\arc.h
+	<vector>
+	<map>
+	<string>
+	<memory>
+	<iostream>
+	"Sommet.h"
+
+1523035690 source:c:\users\ls161871\documents\github\project-info\src\coords.cpp
+	"coords.h"
+
+1523035690 source:c:\users\ls161871\documents\github\project-info\src\graph.cpp
+	"graph.h"
+	<sstream>
+
+1523035689 c:\users\ls161871\documents\github\project-info\include\graph.h
+	<vector>
+	<map>
+	<string>
+	<memory>
+	"../grman/grman.h"
+	"Arc.h"
+	"Sommet.h"
+
+1523035689 c:\users\ls161871\documents\github\project-info\grman\grman.h
+	<allegro.h>
+	<string>
+	"grman_couleurs.h"
+	"coords.h"
+	"widget.h"
+
+1523035689 c:\users\ls161871\documents\github\project-info\grman\grman_couleurs.h
+
+1523035689 c:\users\ls161871\documents\github\project-info\grman\coords.h
+	<cmath>
+
+1523035689 c:\users\ls161871\documents\github\project-info\grman\widget.h
+	"grman.h"
+	<iostream>
+	<string>
+	<vector>
+	<algorithm>
+	<allegro.h>
+
+1523035690 source:c:\users\ls161871\documents\github\project-info\src\grman.cpp
+	<cmath>
+	<unordered_map>
+	<unordered_set>
+	<utility>
+	<string>
+	<iostream>
+	<regex>
+	"grman.h"
+	<allegro.h>
+	<png.h>
+	<loadpng.h>
+	<jpgalleg.h>
+
+1523035690 source:c:\users\ls161871\documents\github\project-info\src\main.cpp
+	"../grman/grman.h"
+	<iostream>
+	"grman.h"
+	"graph.h"
+	"Affichage.h"
+	<stdio.h>
+	<stdlib.h>
+	"Sommet.h"
+	"widget.h"
+	"Menu.h"
+
+1523035689 c:\users\ls161871\documents\github\project-info\include\menu.h
+	"grman.h"
+	<iostream>
+	<stack>
+	"Affichage.h"
+
+1523035690 source:c:\users\ls161871\documents\github\project-info\src\menu.cpp
+	"Menu.h"
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+
+1523035690 source:c:\users\ls161871\documents\github\project-info\src\sommet.cpp
+	"Sommet.h"
+
+1523035690 source:c:\users\ls161871\documents\github\project-info\src\widget.cpp
+	"widget.h"
+
