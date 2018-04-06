@@ -156,7 +156,7 @@
 	<stdio.h>
 	<stdlib.h>
 
-1523035689 c:\users\ls161871\documents\github\project-info\include\affichage.h
+1523047667 c:\users\ls161871\documents\github\project-info\include\affichage.h
 	"grman.h"
 	<iostream>
 	<stack>
@@ -251,7 +251,7 @@
 	<loadpng.h>
 	<jpgalleg.h>
 
-1523044987 source:c:\users\ls161871\documents\github\project-info\src\main.cpp
+1523047667 source:c:\users\ls161871\documents\github\project-info\src\main.cpp
 	"../grman/grman.h"
 	<iostream>
 	"grman.h"
@@ -262,6 +262,7 @@
 	"Sommet.h"
 	"widget.h"
 	"Menu.h"
+	"Affichage2.h"
 
 1523035689 c:\users\ls161871\documents\github\project-info\include\menu.h
 	"grman.h"
@@ -280,4 +281,17 @@
 
 1523035690 source:c:\users\ls161871\documents\github\project-info\src\widget.cpp
 	"widget.h"
+
+1523048433 c:\users\ls161871\documents\github\project-info\include\affichage2.h
+	"grman.h"
+	<iostream>
+	<stack>
+	"Sommet.h"
+	"widget.h"
+
+1523048837 source:c:\users\ls161871\documents\github\project-info\src\affichage2.cpp
+	"Affichage2.h"
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
 

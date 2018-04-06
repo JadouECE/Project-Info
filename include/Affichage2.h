@@ -6,7 +6,7 @@
 #include "Sommet.h"
 #include "widget.h"
 
-class Sommet;///pour qu'elle puisse avoir acces aux données de la classe sommet
+class Sommet;///pour qu'elle puisse avoir acces aux donnees de la classe sommet
 
 class Affichage2
 {
@@ -14,38 +14,38 @@ class Affichage2
 
     friend class Arc;
 
-    public:
+public:
 
-        Affichage2();
-        ~Affichage2();
-        void update2();
-        void add_img(std::string image, int x, int y);
+    Affichage2();
+    ~Affichage2();
+    void update2();
+    void add_img(std::string image, int x, int y);
 
 //    protected:
 
 //    private:
-        ///Fond de l'interface et Box contenant les sommets du graphe 2
-        grman::WidgetBox m_fond2;
-        grman::WidgetBox m_f_requin;
-        grman::WidgetBox m_f_thon;
-        grman::WidgetBox m_f_phoque;
-        grman::WidgetBox m_f_corail;
-        grman::WidgetBox m_f_poisson;
-        grman::WidgetBox m_f_baleine;
-        grman::WidgetBox m_f_plancton;
+    ///Fond de l'interface et Box contenant les sommets du graphe 2
+    grman::WidgetBox m_fond2;
+    grman::WidgetBox m_f_requin;
+    grman::WidgetBox m_f_thon;
+    grman::WidgetBox m_f_phoque;
+    grman::WidgetBox m_f_corail;
+    grman::WidgetBox m_f_poisson;
+    grman::WidgetBox m_f_baleine;
+    grman::WidgetBox m_f_plancton;
 
-        ///Image des sommets
-        grman::WidgetImage m_requin;
-        grman::WidgetImage m_thon;
-        grman::WidgetImage m_phoque;
-        grman::WidgetImage m_corail;
-        grman::WidgetImage m_poisson;
-        grman::WidgetImage m_baleine;
-        grman::WidgetImage m_plancton;
+    ///Image des sommets
+    grman::WidgetImage m_requin;
+    grman::WidgetImage m_thon;
+    grman::WidgetImage m_phoque;
+    grman::WidgetImage m_corail;
+    grman::WidgetImage m_poisson;
+    grman::WidgetImage m_baleine;
+    grman::WidgetImage m_plancton;
 
 
 
-        /// Construction des Arcs entre les sommets, ils seront tous orientés vers leur(s) "proie(s)"
+    /// Construction des Arcs entre les sommets, ils seront tous orientï¿½s vers leur(s) "proie(s)"
 
     grman::WidgetEdge m_corail_plancton;
     grman::WidgetEdge m_corail_poisson;
@@ -59,7 +59,7 @@ class Affichage2
     grman::WidgetEdge m_requin_corail;
     grman::WidgetEdge m_phoque_corail;
 
-        ///Diiférents noms sommets
+    ///Diifï¿½rents noms sommets
 
     grman::WidgetText m_nom_thon;
     grman::WidgetText m_nom_phoque;
@@ -69,7 +69,7 @@ class Affichage2
     grman::WidgetText m_nom_plancton;
     grman::WidgetText m_nom_corail;
 
-        ///VSlider de la gestion de la population de chaque sommet
+    ///VSlider de la gestion de la population de chaque sommet
 
     grman::WidgetVSlider m_pop_thon;
     grman::WidgetVSlider m_pop_phoque;
@@ -79,21 +79,19 @@ class Affichage2
     grman::WidgetVSlider m_pop_plancton;
     grman::WidgetVSlider m_pop_corail;
 
-        ///Affichage des valeurs de coef
+    ///Affichage des valeurs de coef
 
-    /*grman::WidgetText m_phoq_orq;  ICI JE COMPRENDS PAS
-    grman::WidgetText m_ping_phoq;
-    grman::WidgetText m_ping_orq;
-    grman::WidgetText m_pois_ping;
-    grman::WidgetText m_kril_ping;
-    grman::WidgetText m_kril_pois;
-    grman::WidgetText m_mo_kril;
-    grman::WidgetText m_orq_mo;*/
-
-
-
-
-
+    grman::WidgetText m_corail_planct;
+    grman::WidgetText m_corail_poiss;
+    grman::WidgetText m_poisson_tho;
+    grman::WidgetText m_poisson_requ;
+    grman::WidgetText m_poisson_bale;
+    grman::WidgetText m_thon_req;
+    grman::WidgetText m_thon_phoq;
+    grman::WidgetText m_plancton_bale;
+    grman::WidgetText m_baleine_cora;
+    grman::WidgetText m_requin_cora;
+    grman::WidgetText m_phoque_cora;
 
 
 
