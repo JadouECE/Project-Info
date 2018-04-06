@@ -69,6 +69,7 @@ class Sommet
         int m_nb_proie;
         float m_coef_proie1;
         float m_coef_proie2;
+        int perroquets;
         float m_r;
         //int m_index;
         /// liste des arcs arrivant au sommet : proies
