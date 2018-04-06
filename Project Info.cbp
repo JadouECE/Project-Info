@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +23,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -38,16 +40,22 @@
 			<Add library="jpgalleg" />
 			<Add library="alleg44.dll" />
 		</Linker>
-		<Unit filename="graph.cpp" />
-		<Unit filename="graph.h" />
-		<Unit filename="grman/coords.cpp" />
-		<Unit filename="grman/coords.h" />
-		<Unit filename="grman/grman.cpp" />
-		<Unit filename="grman/grman.h" />
-		<Unit filename="grman/grman_couleurs.h" />
-		<Unit filename="grman/widget.cpp" />
-		<Unit filename="grman/widget.h" />
-		<Unit filename="main.cpp" />
+		<Unit filename="include/Affichage.h" />
+		<Unit filename="include/Arc.h" />
+		<Unit filename="include/Sommet.h" />
+		<Unit filename="include/coords.h" />
+		<Unit filename="include/graph.h" />
+		<Unit filename="include/grman.h" />
+		<Unit filename="include/grman_couleurs.h" />
+		<Unit filename="include/widget.h" />
+		<Unit filename="src/Affichage.cpp" />
+		<Unit filename="src/Arc.cpp" />
+		<Unit filename="src/Sommet.cpp" />
+		<Unit filename="src/coords.cpp" />
+		<Unit filename="src/graph.cpp" />
+		<Unit filename="src/grman.cpp" />
+		<Unit filename="src/main.cpp" />
+		<Unit filename="src/widget.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
