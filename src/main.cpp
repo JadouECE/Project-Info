@@ -59,6 +59,8 @@ int main()
         mo.set_population_t(affich.m_pop_krill.get_value());
         poisson.set_population_t(affich.m_pop_poisson.get_value());
 
+
+
             grman::mettre_a_jour();
         }
 

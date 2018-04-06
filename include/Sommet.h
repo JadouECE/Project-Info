@@ -64,9 +64,12 @@ class Sommet
         //std::string m_nom;
         /// population aux moments t et t+1 de l'espèce
         double m_population_t;
-        //int m_population_tpost;
+        double m_population_tpost;
         bool m_existant;
-        //std::string m_type;
+        int m_nb_proie;
+        float m_coef_proie1;
+        float m_coef_proie2;
+        float m_r;
         //int m_index;
         /// liste des arcs arrivant au sommet : proies
         //std::vector<Arc*> m_proie;
@@ -92,8 +95,10 @@ class Sommet
         //Sommet (std::string s_nom , std::string s_type , int s_index , int s_population_t ,int s_population_tpost , float s_regulation , std::string s_nom_predateur);
         Sommet();
         ~Sommet();
+        double augmentation_naturelle_pop();
         void set_population_t(double pop) {m_population_t=pop;}
         double get_population_t() {return m_population_t;}
+        float get_r() {return m_r;}
         /// Vertex étant géré par Graph ce sera la méthode update de graph qui appellera
         /// le pre_update et post_update de Vertex (pas directement la boucle de jeu)
         /// Voir l'implémentation Graph::update dans le .cpp

@@ -47,6 +47,11 @@ Sommet::Sommet()
 {
     m_existant=true;
     m_population_t=100;
+    m_nb_proie=1;
+    m_coef_proie1=1.1;
+    m_coef_proie2=0;
+    m_population_tpost=0;
+    m_r=1.1;
     //m_type=s_type;
     //m_index=s_index;
 
@@ -81,6 +86,10 @@ void Vertex::post_update()
     m_value = m_interface->m_slider_value.get_value();
 }
 */
+double Sommet::augmentation_naturelle_pop()
+{
+    set_population_t((get_population_t())*(get_r()));
+}
 
 Sommet::~Sommet()
 {
