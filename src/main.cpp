@@ -8,7 +8,6 @@
 #include "Sommet.h"
 #include "widget.h"
 #include "Menu.h"
-#include "Affichage2.h"
 
 int main()
 {
@@ -35,8 +34,6 @@ int main()
     Arc or_mo (&orque , &mo, 1.12);
 
     Affichage affich;
-    Affichage2 affich2;
-
     Menu M;
 
     while( !M.m_bouton1.clicked() ||  !M.m_bouton2.clicked() || !M.m_bouton3.clicked() )
@@ -68,15 +65,6 @@ int main()
         }
 
     }
-
-    if (M.m_bouton2.clicked())
-    {
-        while (!key[KEY_ESC])
-        {
-            affich2.update2();
-
-
-        }
 
     }
 
