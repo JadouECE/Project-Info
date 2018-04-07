@@ -7,10 +7,10 @@ Menu::Menu()
 {
 
     m_top_box.set_dim(1000,655);
-    m_top_box.set_bg_color(GRISCLAIR);
+    m_top_box.set_bg_color(BLANC);
 
     m_top_box.add_child( m_fondMenu );
-    m_fondMenu.set_frame(0,0,1000,655);
+    m_fondMenu.set_dim(1000,655);
     m_fondMenu.set_bg_color(GRISCLAIR);
     m_fondMenu.add_child( m_evolve );
     m_evolve.set_pic_name("evolve12.jpg");
