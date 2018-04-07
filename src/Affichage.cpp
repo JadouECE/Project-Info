@@ -6,7 +6,7 @@
 Affichage::Affichage()
 {
     ///Construction du fond bleu clair
-    m_fond.set_dim(1000,558);
+    m_fond.set_dim(1000,750);
     m_fond.set_bg_color(BLANC);
     m_fond.set_moveable();
 

@@ -6,7 +6,7 @@
 Affichage2::Affichage2()
 {
     ///Construction du fond blanc
-    m_fond2.set_dim(1000,558);
+    m_fond2.set_dim(1000,750);
     m_fond2.set_bg_color(BLANC);
     m_fond2.set_moveable();
 
