@@ -9,6 +9,7 @@
 #include "widget.h"
 #include "Menu.h"
 #include "Affichage2.h"
+#include "Affichage3.h"
 
 int main()
 {
@@ -36,6 +37,7 @@ int main()
 
     Affichage affich;
     Affichage2 affich2;
+    Affichage3 affich3;
     Menu M;
 
     while( !M.m_bouton1.clicked() ||  !M.m_bouton2.clicked() || !M.m_bouton3.clicked() )
@@ -73,6 +75,19 @@ int main()
         while (!key[KEY_ESC])
         {
             affich2.update2();
+
+
+
+            grman::mettre_a_jour();
+        }
+
+    }
+
+    if (M.m_bouton3.clicked())
+    {
+        while (!key[KEY_ESC])
+        {
+            affich3.update3();
 
 
 
