@@ -32,6 +32,7 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add option="-std=c++11" />
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Linker>
@@ -41,6 +42,8 @@
 			<Add library="alleg44.dll" />
 		</Linker>
 		<Unit filename="include/Affichage.h" />
+		<Unit filename="include/Affichage2.h" />
+		<Unit filename="include/Affichage3.h" />
 		<Unit filename="include/Arc.h" />
 		<Unit filename="include/Menu.h" />
 		<Unit filename="include/Sommet.h" />
@@ -50,6 +53,8 @@
 		<Unit filename="include/grman_couleurs.h" />
 		<Unit filename="include/widget.h" />
 		<Unit filename="src/Affichage.cpp" />
+		<Unit filename="src/Affichage2.cpp" />
+		<Unit filename="src/Affichage3.cpp" />
 		<Unit filename="src/Arc.cpp" />
 		<Unit filename="src/Menu.cpp" />
 		<Unit filename="src/Sommet.cpp" />

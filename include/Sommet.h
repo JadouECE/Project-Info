@@ -6,6 +6,10 @@
 #include <memory>
 #include <iostream>
 #include "Affichage.h"
+#include <vector>
+#include <map>
+#include <fstream>
+#include <ios>
 /***************************************************
                     SOMMET
 ****************************************************/
@@ -61,15 +65,16 @@ class Sommet
 
     private :
 
-        //std::string m_nom;
-        /// population aux moments t et t+1 de l'espèce
+        std::string m_nom;
         double m_population_t;
-        double m_population_tpost;
+        //double m_population_tpost;
         bool m_existant;
         int m_nb_proie;
         float m_coef_proie1;
         float m_coef_proie2;
-        int perroquets;
+        int m_nb_predateur;
+        float m_coef_predateur1;
+        float m_coef_predateur2;
         float m_r;
         //int m_index;
         /// liste des arcs arrivant au sommet : proies
@@ -94,17 +99,45 @@ class Sommet
 
         /// Ici on ne donne qu'un seul constructeur qui peut utiliser une interface
         //Sommet (std::string s_nom , std::string s_type , int s_index , int s_population_t ,int s_population_tpost , float s_regulation , std::string s_nom_predateur);
-        Sommet();
+        Sommet(std::string nom_fichier);
         ~Sommet();
-        double augmentation_naturelle_pop();
+
+        ///Modulation de la population
+        void augmentation_naturL_pop();
+        void diminution_naturL_pop1(Sommet* predateur);
+        void diminution_naturL_pop2(Sommet* predateur, Sommet* predateur2);
+        ///Verifications
+        void verif_population(Sommet* predateur);
+        void verif_population2(Sommet* predateur, Sommet* predateur2);
+        void verif_pop_proie(Sommet* proie);
+        void verif_pop_proie2(Sommet* proie1, Sommet* proie2);
+        ///Affichage etat des sommets
+        void affichage_etat();
+        void sauvSommet(std::string nomUtilisateur);
+
+        ///Getter et Setter
         void set_population_t(double pop) {m_population_t=pop;}
         double get_population_t() {return m_population_t;}
         float get_r() {return m_r;}
-        /// Vertex étant géré par Graph ce sera la méthode update de graph qui appellera
-        /// le pre_update et post_update de Vertex (pas directement la boucle de jeu)
-        /// Voir l'implémentation Graph::update dans le .cpp
-       // void pre_update();
-        //void post_update();
+        std::string get_nom(){return m_nom;}
+        int get_nb_proie(){return m_nb_proie;}
+        int get_nb_predateur(){return m_nb_predateur;}
+        float get_coef_proie1(){return m_coef_proie1;}
+        float get_coef_proie2(){return m_coef_proie2;}
+        float get_coef_predateur1(){return m_coef_predateur1;}
+        float get_coef_predateur2(){return m_coef_predateur2;}
+        float get_m_r(){return m_r;}
+
+        void set_nom(std::string nom){m_nom=nom;}
+        void set_existant(bool b){m_existant=b;}
+        void set_nb_proie(int nbpr){m_nb_proie=nbpr;}
+        void set_nb_pre(int nbpre){m_nb_predateur=nbpre;}
+        void set_coef_pro1(float coef){m_coef_proie1=coef;}
+        void set_coef_pro2(float coef){m_coef_proie2=coef;}
+        void set_coef_pre1(float coef){m_coef_predateur1=coef;}
+        void set_coef_pre2(float coef){m_coef_predateur2=coef;}
+        void set_r(float r){m_r=r;}
+
 };
 
 #endif // SOMMET_H

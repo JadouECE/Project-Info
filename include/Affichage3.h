@@ -41,8 +41,6 @@ public:
     grman::WidgetBox m_f_elephant;
     grman::WidgetBox m_f_arbre;
     grman::WidgetBox m_f_girafe;
-
-    ///Image des sommets
     grman::WidgetImage m_lion;
     grman::WidgetImage m_guepard;
     grman::WidgetImage m_babouin;
@@ -56,11 +54,6 @@ public:
     grman::WidgetImage m_elephant;
     grman::WidgetImage m_arbre;
     grman::WidgetImage m_girafe;
-
-
-
-    /// Construction des Arcs entre les sommets, ils seront tous orientes vers leur(s) "proie(s)"
-
     grman::WidgetEdge m_arbre_girafe;
     grman::WidgetEdge m_arbre_elephant;
     grman::WidgetEdge m_elephant_oiseau;
@@ -78,8 +71,6 @@ public:
     grman::WidgetEdge m_serpent_babouin;
     grman::WidgetEdge m_girafe_lion;
     grman::WidgetEdge m_oiseau_mo;
-
-    ///Diiferents noms sommets
     grman::WidgetText m_nom_lion;
     grman::WidgetText m_nom_guepard;
     grman::WidgetText m_nom_babouin;
@@ -93,8 +84,6 @@ public:
     grman::WidgetText m_nom_elephant;
     grman::WidgetText m_nom_arbre;
     grman::WidgetText m_nom_girafe;
-
-    ///VSlider de la gestion de la population de chaque sommet
     grman::WidgetVSlider m_pop_lion;
     grman::WidgetVSlider m_pop_guepard;
     grman::WidgetVSlider m_pop_babouin;
@@ -108,9 +97,6 @@ public:
     grman::WidgetVSlider m_pop_elephant;
     grman::WidgetVSlider m_pop_arbre;
     grman::WidgetVSlider m_pop_girafe;
-
-    ///Affichage des valeurs de coef
-
     grman::WidgetText m_arbre_giraf;
     grman::WidgetText m_arbre_elephan;
     grman::WidgetText m_elephan_oiseau;

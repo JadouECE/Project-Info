@@ -1,97 +1,299 @@
 #include "Sommet.h"
+#include <float.h>
+#include <stdio.h>
 
 /***************************************************
                     SOMMET
 ****************************************************/
 
-/*/// Le constructeur met en place les éléments de l'interface
-VertexInterface::VertexInterface(int idx, int x, int y, std::string pic_name, int pic_idx)
+
+Sommet::Sommet(std::string animal)
 {
-    // La boite englobante
-    m_top_box.set_pos(x, y);
-    m_top_box.set_dim(130, 100);
-    m_top_box.set_moveable();
+    std::cout << "DEBUG nom_fichier: " << animal << std::endl;
+    std::ifstream info_sommet(animal.c_str(),std::ios::in);
 
-    // Le slider de réglage de valeur
-    m_top_box.add_child( m_slider_value );
-    m_slider_value.set_range(0.0 , 100.0); // Valeurs arbitraires, à adapter...
-    m_slider_value.set_dim(20,80);
-    m_slider_value.set_gravity_xy(grman::GravityX::Left, grman::GravityY::Up);
+    std::string nom_animal, tmp="", t="true";
+    /*double population_t; //double m_population_tpost;
+    bool existant;
+    int nb_pred;
+    float coef_pred1, coef_pred2, r;*/
+    std::vector<std::string> tab;
 
-    // Label de visualisation de valeur
-    m_top_box.add_child( m_label_value );
-    m_label_value.set_gravity_xy(grman::GravityX::Left, grman::GravityY::Down);
-
-    // Une illustration...
-    if (pic_name!="")
+    if(info_sommet)
     {
-        m_top_box.add_child( m_img );
-        m_img.set_pic_name(pic_name);
-        m_img.set_pic_idx(pic_idx);
-        m_img.set_gravity_x(grman::GravityX::Right);
+        std::string contenu;  // déclaration d'une chaîne qui contiendra la ligne lue
+        getline(info_sommet, contenu);  // on met dans "contenu" la ligne
+        //std::cout << "=> " << contenu << ", "<< contenu.length() << std::endl;  // on affiche la ligne
+
+        for( int i=0; i<contenu.length();i++)
+        {
+            //std::cout << "I: " << i << " " << contenu[i] << std::endl;
+            if(i == contenu.length()-1)
+            {
+                tmp += contenu[i];
+                tab.push_back(tmp);
+                //std::cout << "tmp= " << tmp << std::endl;
+                tmp = ""; //RAZ de la variable tempon
+            }
+            if(contenu[i] == ' ')
+            {
+                //std::cout << "oui" << std::endl;
+                tab.push_back(tmp);
+                //std::cout << "tmp= " << tmp << std::endl;
+                tmp = ""; //RAZ de la variable tempon
+            }
+            else
+            {
+                //std::cout << "non" << std::endl;
+                tmp += contenu[i];
+            }
+
+        }
+
+        //std::cout<< "Size tab: " << tab.size() << std::endl;
+
+        for( int i=0; i<tab.size(); i++)
+        {
+            std::cout << tab[i] << " ";
+        }
+        std::cout << std::endl;
+
+        info_sommet.close();
+
+        m_nom=tab[0];
+        m_population_t= ::atof(tab[1].c_str()); //string to float/double
+        m_existant = (tab[2] == t) ? true : false; // ternary operation
+        m_nb_predateur= ::atoi(tab[3].c_str());
+        m_coef_predateur1= ::atof(tab[4].c_str()); //string to float/double;
+        m_coef_predateur2= ::atof(tab[5].c_str()); //string to float/double
+        m_r= ::atof(tab[6].c_str()); //string to float/double
+
+    }
+    else
+        std::cout<<"Impossible d'ouvrir le fichier"<<std::endl;
+
+
+}
+
+void Sommet::augmentation_naturL_pop()
+{
+    float pop; ///Creation des varaibles tempo
+    float r;
+    double pop_fin;
+    float pop_add;
+    double m_popul_t;
+
+    m_popul_t=m_population_t;  ///Recupere les variables et on les met au bon type
+    pop=(float)m_popul_t;
+    r=m_r;
+
+    if (pop<0)
+    {
+        set_population_t(0);   ///Animal est mort on set donc sa population a 0
+    }
+    else
+    {
+    pop_add=pop*r;              ///Calcul de la nouvelle population
+    pop_fin=(double)pop_add;
+    set_population_t(pop_fin);               ///On stock la nouvelle population dans l'animal en question
+    }
+}
+
+void Sommet::diminution_naturL_pop1(Sommet* predateur)    ///Diminution pour les animaux avec 1 seul prédateur
+{
+    double pop_predateur;
+    float coef_predateur;
+    double pop_animal;
+
+    pop_predateur=(predateur->get_population_t());
+    coef_predateur=(predateur->get_coef_predateur1());
+    pop_animal=m_population_t;
+    if(pop_animal<0)
+    {
+        set_population_t(0);
+    }
+    else
+    {
+        if(pop_predateur>0)
+        {
+            pop_animal=pop_animal-(coef_predateur*pop_predateur);
+            m_population_t=pop_animal;
+        }
+
     }
 
-    // Label de visualisation d'index du sommet dans une boite
-    m_top_box.add_child( m_box_label_idx );
-    m_box_label_idx.set_gravity_xy(grman::GravityX::Right, grman::GravityY::Down);
-    m_box_label_idx.set_dim(20,12);
-    m_box_label_idx.set_bg_color(BLANC);
 
-    m_box_label_idx.add_child( m_label_idx );
-    m_label_idx.set_message( patch::to_string(idx) );
 }
-*/
 
-///Constructeur Sommet
-Sommet::Sommet()
+void Sommet::diminution_naturL_pop2(Sommet* predateur, Sommet* predateur2)   ///Diminution pour 2 predateurs
 {
-    m_existant=true;
-    m_population_t=100;
-    m_nb_proie=1;
-    m_coef_proie1=1.1;
-    m_coef_proie2=0;
-    m_population_tpost=0;
-    m_r=1.1;
-    //m_type=s_type;
-    //m_index=s_index;
+    double pop_predateur;
+    float coef_predateur;
+    double pop_predateur2;
+    float coef_predateur2;
+    double pop_animal;
 
-    //m_population_tpost=s_population_tpost;
-    //m_regulation=s_regulation;
-    //m_nom_predateur=s_nom_predateur;
+    pop_predateur=(predateur->get_population_t());
+    coef_predateur=(predateur->get_coef_predateur1());
+    pop_predateur2=(predateur2->get_population_t());
+    coef_predateur2=(predateur2->get_coef_predateur2());
+    pop_animal=m_population_t;
+
+    if (pop_animal<0)
+    {
+        set_population_t(0);
+    }
+    else
+    {
+        if ((pop_predateur2>0) && (pop_predateur>0))   ///Si les deux predateur sont vivants
+        {
+            pop_animal=pop_animal-(coef_predateur*pop_predateur+coef_predateur2*pop_predateur2);
+            set_population_t(pop_animal);
+        }
+        else if ((pop_predateur2<=0) && (pop_predateur>0))   ///si predateur vivant et predateur 2 mort
+        {
+            pop_animal=pop_animal-(coef_predateur2*pop_predateur2);
+            set_population_t(pop_animal);
+        }
+        else if ((pop_predateur<=0) && (pop_predateur2>0))    ///Si predateur2 vivant et predateur mort
+        {
+            pop_animal=pop_animal-(coef_predateur2*pop_predateur2);
+            set_population_t(pop_animal);
+        }
+    }
 
 }
 
-
-/*/// Gestion du Vertex avant l'appel à l'interface
-void Vertex::pre_update()
+void Sommet::verif_population(Sommet* predateur)        ///Verifie l'état existant des animaux en fonction de leur population
 {
-    if (!m_interface)
-        return;
+    double pop;
+    float coef_pred_asso;
 
-    /// Copier la valeur locale de la donnée m_value vers le slider associé
-    m_interface->m_slider_value.set_value(m_value);
+    pop=m_population_t;
+    coef_pred_asso=(predateur->get_coef_predateur1());
 
-    /// Copier la valeur locale de la donnée m_value vers le label sous le slider
-    m_interface->m_label_value.set_message( patch::to_string( (int)m_value) );
+    if (pop<=0)               ///Si l'animal est mort
+    {
+        set_existant(false);
+        std::cout<<m_nom<<" a disparu du monde  "/*<<m_population_t*/<<std::endl;
+        predateur->set_coef_pre1(0);
+        //predateur->set_coef_pre2(coef_pred2+coef_pred_asso);
+    }
+    else
+    {
+        std::cout<<m_nom<<" est toujours existant avec un population de  : "<<m_population_t<<std::endl;
+    }
+
 }
-*/
-/*
-/// Gestion du Vertex après l'appel à l'interface
-void Vertex::post_update()
+
+void Sommet::verif_population2(Sommet* predateur, Sommet* predateur2)       ///Idem pour 2 predateurs
 {
-    if (!m_interface)
-        return;
+    std::string nom;
+    double pop;
+    float coef_pred_asso;
+    float coef_pred2;
 
-    /// Reprendre la valeur du slider dans la donnée m_value locale
-    m_value = m_interface->m_slider_value.get_value();
+    coef_pred_asso=(predateur->get_coef_predateur1());
+    coef_pred2=(predateur->get_coef_predateur2());
+    pop=m_population_t;
+    if (predateur->get_nom()=="pingouin")
+    {
+
+        if (pop<=0)             ///si animal mort
+        {
+            set_existant(false);
+            std::cout<<m_nom<<" a disparu du monde  "/*<<m_population_t*/<<std::endl;
+            predateur->set_coef_pre2(0);
+            predateur->set_coef_pre1(coef_pred2+coef_pred_asso);
+        }
+
+            std::cout<<m_nom<<" est toujours existant avec une population de :  "<<m_population_t<<std::endl;
+    }
+    else
+    {
+        if (pop<=0)    ///si animal est mort
+        {
+            set_existant(false);
+            std::cout<<m_nom<<" a disparu du monde "/*<<m_population_t*/<<std::endl;
+            predateur->set_coef_pre1(0);
+            predateur->set_coef_pre2(coef_pred2+coef_pred_asso);
+        }
+        //else
+            std::cout<<m_nom<<" est toujours existant avec une population de :  "<<m_population_t<<std::endl;
+    }
+
 }
-*/
-double Sommet::augmentation_naturelle_pop()
+
+void Sommet::verif_pop_proie(Sommet* proie)     ///Verifie que ses sources de nourriture existe encore
 {
-    set_population_t((get_population_t())*(get_r()));
+    double pop_proie;
+    pop_proie=proie->get_population_t();
+
+    if(pop_proie<=0)
+    {
+        set_existant(false);
+        set_population_t(0);
+        std::cout<<m_nom<<" a disparu car sa source de nourriture : "<<proie->get_nom()<<" a disparu "<<std::endl;
+        system("pause");
+    }
+
 }
 
+void Sommet::verif_pop_proie2(Sommet* proie1, Sommet* proie2)       ///Verifie pour 2 type de proie possible
+{
+    double pop_proie1;
+    double pop_proie2;
+
+    pop_proie1=proie1->get_population_t();
+    pop_proie2=proie2->get_population_t();
+
+    if ((pop_proie2<=0) && (pop_proie1<=0))
+    {
+        set_existant(false);
+        set_population_t(0);
+        std::cout<<m_nom<<" a disparu car ses sources de nourriture :"<<proie1->get_nom()<<" et "<<proie2->get_nom()<<" ont disparu. "<<std::endl;
+        system("pause");
+    }
+    else if ((pop_proie2<=0) && (pop_proie1>0))
+    {
+        std::cout<<"Attention, "<<m_nom<<" n'a plus qu'une seule proie possible : "<<proie1->get_nom()<<std::endl;
+    }
+    else if((pop_proie1<=0) && (pop_proie2>0))
+    {
+        std::cout<<"Attention, "<<m_nom<<" n'a plus qu'une seule proie possible : "<<proie2->get_nom()<<std::endl;
+    }
+
+
+}
+
+void Sommet::affichage_etat()
+{
+    bool etat;
+    etat=m_existant;
+    if (etat==true)
+    {
+        std::cout<<m_nom<<" est toujours en vie avec une pop de : "<<m_population_t<<std::endl;
+    }
+    else
+    {
+        std::cout<<m_nom<<" a disparu pop : "<<m_population_t<<std::endl;
+    }
+}
 Sommet::~Sommet()
 {
     //dtor
 }
+
+void Sommet::sauvSommet(std::string nomUtilisateur)
+{
+    std::string nomFichier = nomUtilisateur + m_nom +".txt";  ///nomUtilisateurorque.txt
+
+    std::ofstream outfile (nomFichier);
+
+    outfile << m_nom <<" "<<m_population_t <<" "<<m_existant << " "<< m_nb_predateur <<" "<<m_coef_predateur1<<" "<<m_coef_predateur2<<" "<<m_r << std::endl;
+
+    outfile.close();
+
+}
+
+

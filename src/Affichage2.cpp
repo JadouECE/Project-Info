@@ -13,49 +13,49 @@ Affichage2::Affichage2()
     ///Construction des sommets (Box mobiles)
 
     m_fond2.add_child(m_f_thon);
-    m_f_thon.set_frame(120, 30, 170,170);
+    m_f_thon.set_frame(830, 0, 170, 170);
     m_f_thon.set_bg_color(BLANC);
     m_f_thon.set_moveable();
     m_f_thon.add_child( m_thon );
     m_thon.set_pic_name("thon.bmp");
 
     m_fond2.add_child( m_f_phoque );
-    m_f_phoque.set_frame(250, 130, 170,170);
+    m_f_phoque.set_frame(425, 0, 170,170);
     m_f_phoque.set_bg_color(BLANC);
     m_f_phoque.set_moveable();
     m_f_phoque.add_child(m_phoque);
     m_phoque.set_pic_name("phoque.bmp");
 
     m_fond2.add_child( m_f_poisson );
-    m_f_poisson.set_frame(250, 130, 170, 170);
+    m_f_poisson.set_frame(830, 550, 170, 170);
     m_f_poisson.set_bg_color(BLANC);
     m_f_poisson.set_moveable();
     m_f_poisson.add_child(m_poisson);
     m_poisson.set_pic_name("poisson.bmp");
 
     m_fond2.add_child( m_f_requin );
-    m_f_requin.set_frame(300, 330, 170, 170);
+    m_f_requin.set_frame(690, 225, 170,170);
     m_f_requin.set_bg_color(BLANC);
     m_f_requin.set_moveable();
     m_f_requin.add_child(m_requin);
     m_requin.set_pic_name("requin.bmp");
 
     m_fond2.add_child( m_f_baleine );
-    m_f_baleine.set_frame(380, 400, 170, 170);
+    m_f_baleine.set_frame(140, 550, 170, 170);
     m_f_baleine.set_bg_color(BLANC);
     m_f_baleine.set_moveable();
     m_f_baleine.add_child(m_baleine);
     m_baleine.set_pic_name("baleine.bmp");
 
     m_fond2.add_child( m_f_plancton );
-    m_f_plancton.set_frame(250, 130, 170, 170);
+    m_f_plancton.set_frame(140, 0, 170,170);
     m_f_plancton.set_bg_color(BLANC);
     m_f_plancton.set_moveable();
     m_f_plancton.add_child(m_plancton);
     m_plancton.set_pic_name("plancton.bmp");
 
     m_fond2.add_child( m_f_corail );
-    m_f_corail.set_frame(250, 130, 170, 170);
+    m_f_corail.set_frame(425, 300, 170, 170);
     m_f_corail.set_bg_color(BLANC);
     m_f_corail.set_moveable();
     m_f_corail.add_child(m_corail);

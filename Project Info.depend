@@ -150,13 +150,13 @@
 	<stack>
 	"Affichage.h"
 
-1523107808 source:c:\users\ls161871\documents\github\project-info\src\affichage.cpp
+1523114653 source:c:\users\ls161871\documents\github\project-info\src\affichage.cpp
 	"Affichage.h"
 	<iostream>
 	<stdio.h>
 	<stdlib.h>
 
-1523107650 c:\users\ls161871\documents\github\project-info\include\affichage.h
+1523112332 c:\users\ls161871\documents\github\project-info\include\affichage.h
 	"grman.h"
 	<iostream>
 	<stack>
@@ -271,7 +271,7 @@
 	<stack>
 	"Affichage.h"
 
-1523109172 source:c:\users\ls161871\documents\github\project-info\src\menu.cpp
+1523111482 source:c:\users\ls161871\documents\github\project-info\src\menu.cpp
 	"Menu.h"
 	<iostream>
 	<stdio.h>
@@ -290,7 +290,7 @@
 	"Sommet.h"
 	"widget.h"
 
-1523107808 source:c:\users\ls161871\documents\github\project-info\src\affichage2.cpp
+1523115900 source:c:\users\ls161871\documents\github\project-info\src\affichage2.cpp
 	"Affichage2.h"
 	<iostream>
 	<stdio.h>
@@ -308,4 +308,170 @@
 	<stack>
 	"Sommet.h"
 	"widget.h"
+
+1523291552 source:c:\users\jade laville\documents\projet piscine\project-info\src\affichage.cpp
+	"Affichage.h"
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+
+1523291503 c:\users\jade laville\documents\projet piscine\project-info\include\affichage.h
+	"grman.h"
+	<iostream>
+	<stack>
+	"Sommet.h"
+
+1523035690 c:\users\jade laville\documents\projet piscine\project-info\include\grman.h
+	<allegro.h>
+	<string>
+	"grman_couleurs.h"
+	"coords.h"
+	"widget.h"
+
+1523035690 c:\users\jade laville\documents\projet piscine\project-info\include\grman_couleurs.h
+
+1523035690 c:\users\jade laville\documents\projet piscine\project-info\include\coords.h
+	<cmath>
+
+1523035690 c:\users\jade laville\documents\projet piscine\project-info\include\widget.h
+	"grman.h"
+	<iostream>
+	<string>
+	<vector>
+	<algorithm>
+	<allegro.h>
+
+1523290403 c:\users\jade laville\documents\projet piscine\project-info\include\sommet.h
+	<vector>
+	<map>
+	<string>
+	<memory>
+	<iostream>
+	"Affichage.h"
+	<vector>
+	<map>
+	<fstream>
+	<ios>
+
+1523035692 source:c:\users\jade laville\documents\projet piscine\project-info\src\arc.cpp
+	"Arc.h"
+
+1523035690 c:\users\jade laville\documents\projet piscine\project-info\include\arc.h
+	<vector>
+	<map>
+	<string>
+	<memory>
+	<iostream>
+	"Sommet.h"
+
+1523035692 source:c:\users\jade laville\documents\projet piscine\project-info\src\coords.cpp
+	"coords.h"
+
+1523035692 source:c:\users\jade laville\documents\projet piscine\project-info\src\graph.cpp
+	"graph.h"
+	<sstream>
+
+1523035690 c:\users\jade laville\documents\projet piscine\project-info\include\graph.h
+	<vector>
+	<map>
+	<string>
+	<memory>
+	"../grman/grman.h"
+	"Arc.h"
+	"Sommet.h"
+
+1523035690 c:\users\jade laville\documents\projet piscine\project-info\grman\grman.h
+	<allegro.h>
+	<string>
+	"grman_couleurs.h"
+	"coords.h"
+	"widget.h"
+
+1523035690 c:\users\jade laville\documents\projet piscine\project-info\grman\grman_couleurs.h
+
+1523035690 c:\users\jade laville\documents\projet piscine\project-info\grman\coords.h
+	<cmath>
+
+1523035690 c:\users\jade laville\documents\projet piscine\project-info\grman\widget.h
+	"grman.h"
+	<iostream>
+	<string>
+	<vector>
+	<algorithm>
+	<allegro.h>
+
+1523035692 source:c:\users\jade laville\documents\projet piscine\project-info\src\grman.cpp
+	<cmath>
+	<unordered_map>
+	<unordered_set>
+	<utility>
+	<string>
+	<iostream>
+	<regex>
+	"grman.h"
+	<allegro.h>
+	<png.h>
+	<loadpng.h>
+	<jpgalleg.h>
+
+1523297405 source:c:\users\jade laville\documents\projet piscine\project-info\src\main.cpp
+	"../grman/grman.h"
+	<iostream>
+	"grman.h"
+	"graph.h"
+	"Affichage.h"
+	<stdio.h>
+	<stdlib.h>
+	"Sommet.h"
+	"widget.h"
+	"Menu.h"
+	"Affichage2.h"
+	"Affichage3.h"
+	<unistd.h>
+
+1523035690 c:\users\jade laville\documents\projet piscine\project-info\include\menu.h
+	"grman.h"
+	<iostream>
+	<stack>
+	"Affichage.h"
+
+1523048434 c:\users\jade laville\documents\projet piscine\project-info\include\affichage2.h
+	"grman.h"
+	<iostream>
+	<stack>
+	"Sommet.h"
+	"widget.h"
+
+1523872391 c:\users\jade laville\documents\projet piscine\project-info\include\affichage3.h
+	"grman.h"
+	<iostream>
+	<stack>
+	"Sommet.h"
+	"widget.h"
+
+1523111484 source:c:\users\jade laville\documents\projet piscine\project-info\src\menu.cpp
+	"Menu.h"
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+
+1523297224 source:c:\users\jade laville\documents\projet piscine\project-info\src\sommet.cpp
+	"Sommet.h"
+	<float.h>
+	<stdio.h>
+
+1523035692 source:c:\users\jade laville\documents\projet piscine\project-info\src\widget.cpp
+	"widget.h"
+
+1523115902 source:c:\users\jade laville\documents\projet piscine\project-info\src\affichage2.cpp
+	"Affichage2.h"
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+
+1523117418 source:c:\users\jade laville\documents\projet piscine\project-info\src\affichage3.cpp
+	"Affichage3.h"
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
 

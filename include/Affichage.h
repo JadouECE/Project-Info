@@ -14,7 +14,9 @@ public:
     Affichage();
     ~Affichage();
     void update();
-    void add_img(std::string image, int x, int y);
+    //void modif_population(Sommet* animal);
+    //void augmentation_pop(Sommet animal);
+    //void diminution_naturL_pop1(Sommet predateur);
 
 //    protected:
 
@@ -35,7 +37,7 @@ public:
     grman::WidgetImage m_mo;
     grman::WidgetImage m_poisson;
     grman::WidgetImage m_krill;
-
+    grman::WidgetImage m_play_img;
 
 
     /// Construction des Arcs entre les sommets, ils seront tous orientés vers leur(s) "proie(s)"
@@ -58,6 +60,13 @@ public:
     grman::WidgetText m_nom_krill;
     grman::WidgetText m_nom_mo;
 
+    grman::WidgetText m_npop_orque;
+    grman::WidgetText m_npop_phoque;
+    grman::WidgetText m_npop_pingouin;
+    grman::WidgetText m_npop_poisson;
+    grman::WidgetText m_npop_krill;
+    grman::WidgetText m_npop_mo;
+
     ///VSlider de la gestion de la population de chaque sommet
 
     grman::WidgetVSlider m_pop_orque;
@@ -77,11 +86,12 @@ public:
     grman::WidgetText m_kril_pois;
     grman::WidgetText m_mo_kril;
     grman::WidgetText m_orq_mo;
+    grman::WidgetText m_sauve;
 
+    ///Affichage des boutons
 
-
-
-
+    grman::WidgetButton m_play;
+    grman::WidgetButton m_sauvergarder;
 
 };
 

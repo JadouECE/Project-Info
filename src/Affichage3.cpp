@@ -13,49 +13,49 @@ Affichage3::Affichage3()
     ///Construction des sommets (Box mobiles)
 
     m_fond3.add_child(m_f_lion);
-    m_f_lion.set_frame(120, 30, 170,170);
+    m_f_lion.set_frame(630, 0, 170, 170);
     m_f_lion.set_bg_color(BLANC);
     m_f_lion.set_moveable();
     m_f_lion.add_child( m_lion );
     m_lion.set_pic_name("lion.bmp");
 
     m_fond3.add_child( m_f_guepard );
-    m_f_guepard.set_frame(250, 130, 170,170);
+    m_f_guepard.set_frame(110, 0, 170,170);
     m_f_guepard.set_bg_color(BLANC);
     m_f_guepard.set_moveable();
     m_f_guepard.add_child(m_guepard);
     m_guepard.set_pic_name("guepard.bmp");
 
     m_fond3.add_child( m_f_babouin );
-    m_f_babouin.set_frame(250, 130, 170, 170);
+    m_f_babouin.set_frame(300, 0, 170, 170);
     m_f_babouin.set_bg_color(BLANC);
     m_f_babouin.set_moveable();
     m_f_babouin.add_child(m_babouin);
     m_babouin.set_pic_name("babouin.bmp");
 
     m_fond3.add_child( m_f_serpent );
-    m_f_serpent.set_frame(300, 330, 170, 170);
+    m_f_serpent.set_frame(110, 180, 170,170);
     m_f_serpent.set_bg_color(BLANC);
     m_f_serpent.set_moveable();
     m_f_serpent.add_child(m_serpent);
     m_serpent.set_pic_name("serpent.bmp");
 
     m_fond3.add_child( m_f_souris );
-    m_f_souris.set_frame(380, 400, 170, 170);
+    m_f_souris.set_frame(110, 450, 170,170);
     m_f_souris.set_bg_color(BLANC);
     m_f_souris.set_moveable();
     m_f_souris.add_child(m_souris);
     m_souris.set_pic_name("souris.bmp");
 
     m_fond3.add_child( m_f_antilope );
-    m_f_antilope.set_frame(250, 130, 170, 170);
+    m_f_antilope.set_frame(830, 550, 170, 170);
     m_f_antilope.set_bg_color(BLANC);
     m_f_antilope.set_moveable();
     m_f_antilope.add_child(m_antilope);
     m_antilope.set_pic_name("antilope.bmp");
 
     m_fond3.add_child( m_f_zebre );
-    m_f_zebre.set_frame(250, 130, 170, 170);
+    m_f_zebre.set_frame(630, 360, 170, 170);
     m_f_zebre.set_bg_color(BLANC);
     m_f_zebre.set_moveable();
     m_f_zebre.add_child(m_zebre);
@@ -90,14 +90,14 @@ Affichage3::Affichage3()
     m_elephant.set_pic_name("elephant.bmp");
 
     m_fond3.add_child( m_f_arbre );
-    m_f_arbre.set_frame(250, 130, 170, 170);
+    m_f_arbre.set_frame(830, 280, 170, 170);
     m_f_arbre.set_bg_color(BLANC);
     m_f_arbre.set_moveable();
     m_f_arbre.add_child(m_arbre);
     m_arbre.set_pic_name("arbre.bmp");
 
     m_fond3.add_child( m_f_girafe );
-    m_f_girafe.set_frame(250, 130, 170, 170);
+    m_f_girafe.set_frame(830, 0, 170, 170);
     m_f_girafe.set_bg_color(BLANC);
     m_f_girafe.set_moveable();
     m_f_girafe.add_child(m_girafe);
